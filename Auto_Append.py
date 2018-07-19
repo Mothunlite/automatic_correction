@@ -82,13 +82,13 @@ class Instantiation():
         save_btn = self.Boswer.find_element_by_xpath("//*[@id='add-product-submit-btn']")
         save_btn.click()
 
-    def change_info(self, url, ori_price, price, profit, Taxation):
+    def change_info(self, url, ori_prices, price, profit, Taxation):
         self.Boswer.get(url)
         sleep(1)
         # 划线价
         ori_price = self.Boswer.find_element_by_xpath("//*[@id='submitForm']/div/div[2]/div[6]/div[2]/input")
         ori_price.clear()
-        ori_price.send_keys(ori_price)
+        ori_price.send_keys(ori_prices)
         # 销售价
         sale_price = self.Boswer.find_element_by_xpath("//*[@id='submitForm']/div/div[2]/div[8]/div[1]/input")
         sale_price.clear()
